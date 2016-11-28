@@ -1,0 +1,15 @@
+<h1>Hospitals</h1>
+
+<%= for facility <- @hospital_list do %>
+  <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="http://i.pravatar.cc/100?img=70" alt="" class="circle">
+      <span class="title"><a href="/medicalfacilities"><%= facility%></a></span>
+       <p>
+
+        Click here to expand
+       </p>
+
+    </li>
+  </ul>
+<% end %>

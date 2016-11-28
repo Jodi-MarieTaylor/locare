@@ -1,0 +1,25 @@
+<h2>Hospitals</h2>
+<h5> Country: Jamaica </h5>
+<form method="GET" action="/hospital/search">
+  <div class="row">
+    <div class="input-field col s4" style="margin: 0px 0px 0px 30%;">
+      <i class="material-icons prefix ">search</i>
+        <input type="search" name="hospital" placeholder="Search Medical Facilities" required="">
+      <i class="material-icons">close</i>
+    </div>
+  </div>
+</form>
+
+<%= for facility <- @hospital_list do %>
+  <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="http://wildhunt.org/wp-content/uploads/2016/04/maxresdefault.jpg" alt="" class="circle">
+      <span class="title"><a href="/medicalfacilities"><%= facility%></a></span>
+       <p>
+
+        Click here to expand
+       </p>
+
+    </li>
+  </ul>
+<% end %>
